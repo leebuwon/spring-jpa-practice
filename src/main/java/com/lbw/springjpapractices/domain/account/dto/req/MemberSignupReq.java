@@ -1,6 +1,8 @@
 package com.lbw.springjpapractices.domain.account.dto.req;
 
 import com.lbw.springjpapractices.domain.account.entity.Account;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.*;
 
 @Getter
@@ -8,11 +10,16 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class MemberSignupReq {
-
+    // 유효성 검사 실패시 MethodArgumentNotValidException 발생
+    @Email
     private String email;
+    @NotEmpty
     private String password;
+    @NotEmpty
     private String city;
+    @NotEmpty
     private String region;
+    @NotEmpty
     private String zip;
 
     public static Account toEntity(MemberSignupReq dto) {

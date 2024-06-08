@@ -4,6 +4,7 @@ import com.lbw.springjpapractices.domain.account.dto.req.AddressUpdateReq;
 import com.lbw.springjpapractices.domain.account.dto.req.MemberSignupReq;
 import com.lbw.springjpapractices.domain.account.dto.res.AccountRes;
 import com.lbw.springjpapractices.domain.account.service.AccountService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -19,7 +20,7 @@ public class AccountController {
     private final AccountService accountService;
 
     @PostMapping("/signup")
-    public ResponseEntity<Void> signup(@RequestBody MemberSignupReq dto){
+    public ResponseEntity<Void> signup(@RequestBody @Valid MemberSignupReq dto){
         accountService.signup(dto);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
