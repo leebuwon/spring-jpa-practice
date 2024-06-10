@@ -18,7 +18,7 @@ public class AccountRes {
 
     public static AccountRes of(Account account){
         return AccountRes.builder()
-                .email(account.getEmail())
+                .email(account.getEmail().getAddress())
                 .city(account.getCity())
                 .region(account.getRegion())
                 .zip(account.getZip())

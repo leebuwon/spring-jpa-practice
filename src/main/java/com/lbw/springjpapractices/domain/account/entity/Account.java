@@ -1,6 +1,7 @@
 package com.lbw.springjpapractices.domain.account.entity;
 
 import com.lbw.springjpapractices.domain.account.dto.req.AddressUpdateReq;
+import com.lbw.springjpapractices.domain.email.Email;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
@@ -22,8 +23,8 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "email", nullable = false, unique = true)
-    private String email;
+    @Embedded
+    private Email email;
 
     @Column(name = "password", nullable = false)
     private String password;
