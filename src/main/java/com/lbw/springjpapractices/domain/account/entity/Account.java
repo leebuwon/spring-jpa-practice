@@ -1,6 +1,7 @@
 package com.lbw.springjpapractices.domain.account.entity;
 
 import com.lbw.springjpapractices.domain.account.dto.req.AddressUpdateReq;
+import com.lbw.springjpapractices.domain.address.Address;
 import com.lbw.springjpapractices.domain.email.Email;
 import jakarta.persistence.*;
 import lombok.*;
@@ -29,14 +30,8 @@ public class Account {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "city", nullable = false)
-    private String city;
-
-    @Column(name = "region", nullable = false)
-    private String region;
-
-    @Column(name = "zip", nullable = false)
-    private String zip;
+    @Embedded
+    private Address address;
 
     @Column(name = "created_at")
     @CreatedDate
@@ -46,10 +41,7 @@ public class Account {
     @LastModifiedDate
     private LocalDateTime modifiedAt;
 
-    public void updateMyAccount(AddressUpdateReq req){
-        this.city = req.getCity();
-        this.region = req.getRegion();
-        this.zip = req.getZip();
-
+    public void updateMyAccount(AddressUpdateReq req) {
+        this.address = req.getAddress();
     }
 }

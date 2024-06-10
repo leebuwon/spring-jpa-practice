@@ -11,5 +11,5 @@ public class Email {
 
     @jakarta.validation.constraints.Email
     @Column(name = "email", nullable = false, unique = true)
-    private String address;
+    private String email;
 }

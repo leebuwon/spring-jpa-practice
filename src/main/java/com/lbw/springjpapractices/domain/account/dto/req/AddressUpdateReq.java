@@ -1,5 +1,7 @@
 package com.lbw.springjpapractices.domain.account.dto.req;
 
+import com.lbw.springjpapractices.domain.address.Address;
+import jakarta.validation.Valid;
 import lombok.*;
 
 @Getter
@@ -7,7 +9,6 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class AddressUpdateReq {
-    private String city;
-    private String region;
-    private String zip;
+    @Valid
+    private Address address;
 }
