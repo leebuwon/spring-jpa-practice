@@ -23,6 +23,7 @@ public class AccountService {
     private final AccountRepository accountRepository;
     @Transactional
     public void signup(MemberSignupReq dto) {
+        log.info("dto password  = {}", dto.getPassword().getValue());
         accountRepository.save(MemberSignupReq.toEntity(dto));
     }
 

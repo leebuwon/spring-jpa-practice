@@ -3,6 +3,7 @@ package com.lbw.springjpapractices.domain.account.entity;
 import com.lbw.springjpapractices.domain.account.dto.req.AddressUpdateReq;
 import com.lbw.springjpapractices.domain.address.Address;
 import com.lbw.springjpapractices.domain.email.Email;
+import com.lbw.springjpapractices.domain.password.Password;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
@@ -27,8 +28,8 @@ public class Account {
     @Embedded
     private Email email;
 
-    @Column(name = "password", nullable = false)
-    private String password;
+    @Embedded
+    private Password password;
 
     @Embedded
     private Address address;
