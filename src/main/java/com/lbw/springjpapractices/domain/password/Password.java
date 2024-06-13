@@ -1,5 +1,7 @@
 package com.lbw.springjpapractices.domain.password;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.EntityListeners;
@@ -20,6 +22,7 @@ public class Password {
     @Column(name = "password", nullable = false)
     private String value;
 
+    @JsonIgnore
     @LastModifiedDate
     @Column(name = "password_expiration_date")
     private LocalDateTime expirationDate;
