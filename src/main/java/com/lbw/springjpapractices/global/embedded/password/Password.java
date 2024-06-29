@@ -1,4 +1,4 @@
-package com.lbw.springjpapractices.domain.password;
+package com.lbw.springjpapractices.global.embedded.password;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;

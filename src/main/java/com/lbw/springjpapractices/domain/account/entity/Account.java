@@ -1,9 +1,9 @@
 package com.lbw.springjpapractices.domain.account.entity;
 
 import com.lbw.springjpapractices.domain.account.dto.req.AddressUpdateReq;
-import com.lbw.springjpapractices.domain.address.Address;
-import com.lbw.springjpapractices.domain.email.Email;
-import com.lbw.springjpapractices.domain.password.Password;
+import com.lbw.springjpapractices.global.embedded.address.Address;
+import com.lbw.springjpapractices.global.embedded.email.Email;
+import com.lbw.springjpapractices.global.embedded.password.Password;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;

@@ -1,4 +1,4 @@
-package com.lbw.springjpapractices.domain.email;
+package com.lbw.springjpapractices.global.embedded.email;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;

@@ -1,9 +1,9 @@
 package com.lbw.springjpapractices.domain.account.dto.req;
 
 import com.lbw.springjpapractices.domain.account.entity.Account;
-import com.lbw.springjpapractices.domain.address.Address;
-import com.lbw.springjpapractices.domain.email.Email;
-import com.lbw.springjpapractices.domain.password.Password;
+import com.lbw.springjpapractices.global.embedded.address.Address;
+import com.lbw.springjpapractices.global.embedded.email.Email;
+import com.lbw.springjpapractices.global.embedded.password.Password;
 import jakarta.validation.Valid;
 import lombok.*;
 import lombok.extern.slf4j.Slf4j;

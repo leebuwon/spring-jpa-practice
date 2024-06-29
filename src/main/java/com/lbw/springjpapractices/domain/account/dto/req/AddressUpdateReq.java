@@ -1,6 +1,6 @@
 package com.lbw.springjpapractices.domain.account.dto.req;
 
-import com.lbw.springjpapractices.domain.address.Address;
+import com.lbw.springjpapractices.global.embedded.address.Address;
 import jakarta.validation.Valid;
 import lombok.*;
 

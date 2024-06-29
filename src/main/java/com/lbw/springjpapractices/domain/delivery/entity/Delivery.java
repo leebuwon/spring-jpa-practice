@@ -1,6 +1,6 @@
 package com.lbw.springjpapractices.domain.delivery.entity;
 
-import com.lbw.springjpapractices.domain.address.Address;
+import com.lbw.springjpapractices.global.embedded.address.Address;
 import com.lbw.springjpapractices.domain.deliverylog.entity.DeliveryLog;
 import com.lbw.springjpapractices.domain.deliverylog.entity.DeliveryStatus;
 import jakarta.persistence.*;
@@ -13,7 +13,6 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 @Entity
 @Slf4j

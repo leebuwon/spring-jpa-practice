@@ -1,4 +1,4 @@
-package com.lbw.springjpapractices.domain.address;
+package com.lbw.springjpapractices.global.embedded.address;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
