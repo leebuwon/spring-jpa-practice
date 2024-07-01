@@ -41,4 +41,9 @@ public class Coupon {
     @Column(name = "modified_at")
     @LastModifiedDate
     private LocalDateTime modifiedAt;
+
+
+    public void update() {
+        this.active = true;
+    }
 }
