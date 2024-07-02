@@ -11,3 +11,10 @@ spring:
         jdbc:
           batch_size: 100
         format_sql: true
+
+user:
+  email: "yun@test.com"
+  nickname: "yun"
+  age: 28
+  auth: false
+  amount: 101
